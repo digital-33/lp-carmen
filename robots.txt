@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://carmempresentesecestas.com.br/sitemap.xml

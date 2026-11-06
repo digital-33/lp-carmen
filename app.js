@@ -1,0 +1,10 @@
+const MESSAGE='Olá! Vim pelo site da Carmem Presentes e Cestas e gostaria de conhecer as opções de presentes e fazer um pedido. 😊';
+const WHATSAPP='https://wa.me/5527992742647?text='+encodeURIComponent(MESSAGE);
+document.querySelectorAll('[data-wa]').forEach(a=>{a.href=WHATSAPP;a.target='_blank';a.rel='noopener';});
+window.dataLayer=window.dataLayer||[];
+window.dataLayer.push({'gtm.start':Date.now(),event:'gtm.js'});
+const g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtm.js?id=GTM-5XXQ57TM';document.head.appendChild(g);
+const fb=window.fbq=function(){fb.callMethod?fb.callMethod.apply(fb,arguments):fb.queue.push(arguments)};fb.queue=[];fb.loaded=true;fb.version='2.0';window._fbq=fb;
+fb('init','1000960519625580');fb('track','PageView');
+const s=document.createElement('script');s.async=true;s.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(s);
+document.addEventListener('click',event=>{const a=event.target.closest('[data-wa]');if(!a)return;window.dataLayer.push({event:'whatsapp_click',cta_location:a.dataset.wa,cta_id:a.dataset.wa,contact_channel:"whatsapp",contact_intent:true});window.fbq('track','Lead',{content_name:'WhatsApp',content_category:'Intenção de contato'});});
