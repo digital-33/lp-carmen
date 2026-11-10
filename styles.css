@@ -369,6 +369,13 @@ h2 {
   overflow: hidden;
 }
 
+.product > img:first-child {
+  width: calc(100% + 40px);
+  max-width: none;
+  margin: 0 -20px;
+  background: var(--cream);
+}
+
 .product img {
   display: block;
   width: 100%;
@@ -976,6 +983,10 @@ header .wa-icon {
   .product > a:first-child {
     margin: 0 -16px;
   }
+  .product > img:first-child {
+    width: calc(100% + 32px);
+    margin: 0 -16px;
+  }
   .product h3 {
     font-size: 22px;
   }
@@ -1136,6 +1147,11 @@ header .wa-icon {
   }
 
   .product > a:first-child {
+    margin: 0 -20px;
+  }
+
+  .product > img:first-child {
+    width: calc(100% + 40px);
     margin: 0 -20px;
   }
 
