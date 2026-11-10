@@ -71,6 +71,27 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// Controles de rolagem horizontal (Carrossel de fotos e Provas Sociais)
+document.querySelectorAll('[data-carousel-prev]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const track = document.getElementById(btn.dataset.carouselPrev);
+    if (track) {
+      const step = Math.max(track.clientWidth * 0.75, 260);
+      track.scrollBy({ left: -step, behavior: 'smooth' });
+    }
+  });
+});
+
+document.querySelectorAll('[data-carousel-next]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const track = document.getElementById(btn.dataset.carouselNext);
+    if (track) {
+      const step = Math.max(track.clientWidth * 0.75, 260);
+      track.scrollBy({ left: step, behavior: 'smooth' });
+    }
+  });
+});
+
 // GTM & Meta Pixel Analytics
 window.dataLayer = window.dataLayer || [];
 window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
